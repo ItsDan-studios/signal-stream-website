@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal Stream | Practical AI Solutions for Service Businesses</title>
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --bg-white: #FFFFFF;
+            --bg-grey: #F4F5F7;
+            --ocean-blue: #0F2A4A;
+            --ocean-blue-hover: #163e6e;
+            --text-main: #1A202C;
+            --text-muted: #4A5568;
+            --border-color: #E2E8F0;
+            --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            background-color: var(--bg-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 { color: var(--ocean-blue); font-weight: 700; line-height: 1.2; }
+        h1 { font-size: 3.5rem; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        h2 { font-size: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.01em; }
+        h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+        p { margin-bottom: 1rem; font-size: 1.125rem; color: var(--text-muted); }
+
+        /* Layout & Utilities */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .section { padding: 6rem 0; }
+        .bg-grey { background-color: var(--bg-grey); }
+        .text-center { text-align: center; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--ocean-blue);
+            color: var(--bg-white);
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--ocean-blue);
+        }
+        .btn:hover { background-color: var(--ocean-blue-hover); border-color: var(--ocean-blue-hover); color: var(--bg-white); }
+        .btn-outline { background-color: transparent; color: var(--ocean-blue); }
+        .btn-outline:hover { background-color: var(--ocean-blue); color: var(--bg-white); }
+
+        /* Navigation */
+        nav { padding: 1.5rem 0; background: var(--bg-white); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--ocean-blue); text-decoration: none; letter-spacing: -0.02em; }
+
+        /* Cards */
+        .card {
+            background: var(--bg-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        .bg-grey .card { background: var(--bg-white); }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(15, 42, 74, 0.06); }
+        .card-icon { font-size: 2rem; color: var(--ocean-blue); margin-bottom: 1.5rem; display: block; }
+
+        /* Custom Section Styles */
+        .hero { padding: 8rem 0 6rem; text-align: left; }
+        .hero p { font-size: 1.25rem; max-width: 600px; margin-bottom: 2.5rem; }
+
+        .tagline { text-transform: uppercase; font-size: 0.875rem; font-weight: 700; color: var(--ocean-blue); letter-spacing: 0.1em; margin-bottom: 1rem; display: block; }
+
+        .steps-wrapper { position: relative; }
+        .step-number { font-size: 3rem; font-weight: 800; color: var(--bg-grey); line-height: 1; margin-bottom: 1rem; color: var(--border-color);}
+
+        .final-cta { background-color: var(--ocean-blue); color: var(--bg-white); text-align: center; }
+        .final-cta h2, .final-cta p { color: var(--bg-white); }
+        .final-cta p { opacity: 0.9; margin: 0 auto 2.5rem; max-width: 600px; }
+        .final-cta .btn { background-color: var(--bg-white); color: var(--ocean-blue); border-color: var(--bg-white); }
+        .final-cta .btn:hover { background-color: transparent; color: var(--bg-white); border-color: var(--bg-white); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 2rem; }
+            .hero { padding: 5rem 0; }
+            .section { padding: 4rem 0; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo" style="display: flex; align-items: center; gap: 0.6rem;">
+                <img src="assets/logo.png" alt="Signal Stream" style="height: 72px; width: auto; display: block;">
+                <span style="display: flex; flex-direction: column; line-height: 1.15;">
+                    <span style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--ocean-blue);">SignalStream</span>
+                    <span style="font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ocean-blue);">Solutions</span>
+                </span>
+            </a>
+            <a href="#contact" class="btn btn-outline">Let's Talk</a>
+        </div>
+    </nav>
+
+    <section class="section hero">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <span class="tagline">Operations First. AI Second.</span>
+                    <h1>AI Solutions<br>Built Around Your Business</h1>
+                    <p>We help businesses identify operational bottlenecks and implement practical AI systems that reduce manual work, improve follow-up, and support sustainable growth.</p>
+                    <a href="#contact" class="btn">Schedule a Strategy Call</a>
+                </div>
+                <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+                    <video src="assets/signal-stream-animation.mp4" autoplay loop muted playsinline style="width: 120%; max-width: none; display: block; mask-image: radial-gradient(ellipse at center, black 50%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse at center, black 50%, transparent 75%);"></video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section bg-grey">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto 4rem;">
+                <span class="tagline">The Process</span>
+                <h2>Solve the right problem first.</h2>
+                <p>We don't force tech onto your business. We map your operations, find the real leaks, and build targeted solutions.</p>
+            </div>
+
+            <div class="grid-3 steps-wrapper">
+                <div>
+                    <div class="step-number">01</div>
+                    <h3>Discover & Audit</h3>
+                    <p>We sit down with you to understand exactly how your business runs today. We map your workflow, identify the biggest time-sinks, and define clear goals.</p>
+                </div>
+                <div>
+                    <div class="step-number">02</div>
+                    <h3>Design & Build</h3>
+                    <p>We develop custom AI and automation workflows tailored precisely to your specific bottlenecks, integrating seamlessly with your existing software stack.</p>
+                </div>
+                <div>
+                    <div class="step-number">03</div>
+                    <h3>Implement & Support</h3>
+                    <p>We roll out the solution, train your team, and ensure everything runs flawlessly. We start where you are, leaving room to scale as you grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <span class="tagline">Why Signal Stream</span>
+                    <h2>Built for established businesses that need operational clarity.</h2>
+                    <p>Many technology firms lead with complexity. We take a different approach. Signal Stream works with businesses that want practical systems, measurable improvements, and solutions that support day-to-day operations without adding unnecessary friction.</p>
+                    <ul style="list-style: none; margin-top: 2rem;">
+                        <li style="margin-bottom: 1.25rem; display: flex; align-items: flex-start;">
+                            <span style="color: var(--ocean-blue); margin-right: 1rem; font-weight: bold; flex-shrink: 0;">✓</span>
+                            <span><strong>Practical over promotional.</strong> We focus on outcomes that matter to the business — stronger processes, saved time, and improved operational efficiency.</span>
+                        </li>
+                        <li style="margin-bottom: 1.25rem; display: flex; align-items: flex-start;">
+                            <span style="color: var(--ocean-blue); margin-right: 1rem; font-weight: bold; flex-shrink: 0;">✓</span>
+                            <span><strong>Results with clear business value.</strong> Every solution is designed to reduce manual workload, improve responsiveness, or help recover missed opportunities.</span>
+                        </li>
+                        <li style="margin-bottom: 1.25rem; display: flex; align-items: flex-start;">
+                            <span style="color: var(--ocean-blue); margin-right: 1rem; font-weight: bold; flex-shrink: 0;">✓</span>
+                            <span><strong>Built around your existing workflow.</strong> Our approach fits into the way your team already operates, so implementation feels structured and manageable.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-grey" style="padding: 3rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 1rem;">Why clients bring us in</h3>
+                    <p>We are usually brought in to solve operational issues that directly affect time, consistency, and revenue. This often includes:</p>
+                    <ul style="list-style: disc; padding-left: 1.25rem; margin-top: 1.5rem;">
+                        <li style="margin-bottom: 0.75rem; color: var(--text-muted);">Streamlining repetitive tasks</li>
+                        <li style="margin-bottom: 0.75rem; color: var(--text-muted);">Improving responsiveness to new opportunities</li>
+                        <li style="margin-bottom: 0.75rem; color: var(--text-muted);">Strengthening internal processes</li>
+                        <li style="margin-bottom: 0.75rem; color: var(--text-muted);">Reducing reliance on manual coordination</li>
+                        <li style="margin-bottom: 0.75rem; color: var(--text-muted);">Bringing structure to fragmented workflows</li>
+                        <li style="color: var(--text-muted);">Supporting growth with better systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-grey">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <img src="assets/profile.png" alt="Dan, Founder of Signal Stream" style="width: 100%; border-radius: 8px; display: block; object-fit: cover; max-height: 480px;">
+                </div>
+                <div>
+                    <span class="tagline">About</span>
+                    <h2>Meet Dan</h2>
+                    <p>I've spent time understanding what AI can genuinely do when it's applied with intention — not as a trend, but as a tool that solves a specific problem for a specific business.</p>
+                    <p>What I kept seeing was a gap. Businesses that could benefit from this technology were either not using it at all, or being introduced to it in ways that were generic, overcomplicated, and disconnected from how they actually operate.</p>
+                    <p>Signal Stream exists to change that. We work directly with business owners — learning how their operations run, finding what's actually slowing them down, and building solutions that fit.</p>
+                    <p style="color: var(--ocean-blue); font-weight: 600; font-style: italic; border-left: 3px solid var(--ocean-blue); padding-left: 1.25rem; margin-top: 2rem;">"I started Signal Stream to close the gap between powerful technology and the businesses that need it most."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section final-cta">
+        <div class="container">
+            <h2>Ready to streamline your operations?</h2>
+            <p>Let's have a 15-minute conversation about your biggest bottleneck. No sales pitch, just practical advice on how to fix it.</p>
+            <a href="#" class="btn">Book Your Strategy Call</a>
+        </div>
+    </section>
+
+    <footer style="background: var(--bg-white); padding: 2rem 0; border-top: 1px solid var(--border-color); text-align: center;">
+        <div class="container">
+            <p style="margin: 0; font-size: 0.875rem;">&copy; 2024 Signal Stream. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>
