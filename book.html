@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Discovery Call | Signal Stream</title>
+    <meta name="description" content="Pick a time for your discovery call. We'll review your situation beforehand so we come prepared.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@300;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+    <!-- Shared Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Signal Stream" class="logo-img">
+                <span class="logo-text-wrapper">
+                    <span class="logo-title">SignalStream</span>
+                    <span class="logo-subtitle">Solutions</span>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="mobile-menu-btn">&#9776;</button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Get in Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Confirmation + Booking -->
+    <section class="section" style="padding-bottom: 2rem;">
+        <div class="container" style="max-width: 800px;">
+            <div class="text-center">
+                <h1 style="color: var(--ocean-blue); margin-bottom: 1rem;">Got It. Now Pick a Time.</h1>
+                <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 1rem;">Your message is in. Choose a discovery call below and we'll come prepared with your details.</p>
+                <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 0;">15 minutes for a quick intro, or 30 minutes if you want to go deeper.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cal.com Embed -->
+    <section class="section bg-grey" style="padding-top: 2rem;">
+        <div class="container" style="max-width: 1000px;">
+            <div class="cal-embed-wrapper">
+                <iframe
+                    src="https://cal.com/daniel-hernandez-fye2ha?embed=1&layout=month&theme=light"
+                    style="border:none; width:100%; height:700px;"
+                    frameborder="0"
+                    loading="lazy"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skip Option -->
+    <section class="section" style="padding: 3rem 0;">
+        <div class="container text-center">
+            <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Not ready to book yet? No problem.</p>
+            <p style="margin-bottom: 0;"><a href="index.html" style="color: var(--ocean-blue); font-weight: 600; text-decoration: none;">Back to Home</a></p>
+        </div>
+    </section>
+
+    <!-- Shared Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.875rem;">&copy; 2026 Signal Stream Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
