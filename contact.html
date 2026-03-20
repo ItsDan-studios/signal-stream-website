@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Signal Stream | Let's Talk About Your Operations</title>
+    <meta name="description" content="Tell us what's slowing your business down. We'll come back with honest, practical advice on whether AI can help - and how.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@300;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Shared Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="assets/logo.png" alt="Signal Stream Mark" class="logo-img">
+                <span class="logo-text-wrapper">
+                    <span class="logo-title">SIGNALSTREAM</span>
+                    <span class="logo-subtitle">AI Solutions</span>
+                </span>
+            </a>
+            
+            <button class="menu-toggle" id="mobile-menu-btn">☰</button>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem; color: var(--accent-amber); border-color: var(--accent-amber);">Get in Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="section" style="padding-bottom: 3rem;">
+        <div class="container text-center">
+            <h1 style="margin: 0 auto 1.5rem; max-width: 800px;">Let's Talk About Your Biggest Bottleneck</h1>
+            <p style="margin: 0 auto; max-width: 700px; font-size: 1.25rem;">Tell us what's slowing your business down. We'll come back with honest, practical advice on whether AI can help — and how.</p>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Left Column: Info & Reassurance -->
+                <div>
+                    <h2 style="font-size: 1.75rem; margin-bottom: 2rem;">What to Expect</h2>
+                    <div class="card" style="margin-bottom: 3rem; background: var(--bg-deep); border-color: transparent;">
+                        <h3 style="font-size: 1.2rem; color: var(--accent-amber); margin-bottom: 1rem;">A 15-minute Discovery Call where we:</h3>
+                        <ul class="feature-list" style="margin-top: 0;">
+                            <li><span>✓</span> <strong>Learn how your business operates and where the friction is</strong></li>
+                            <li><span>✓</span> <strong>Identify quick wins and high-impact opportunities</strong></li>
+                            <li><span>✓</span> <strong>Recommend a clear starting point — or tell you honestly if AI isn't the right fit</strong></li>
+                        </ul>
+                        <p style="margin-top: 1.5rem; margin-bottom: 0; font-weight: 500; color: var(--text-main);">No sales pitch. No obligation. Just a focused conversation about your operations.</p>
+                    </div>
+
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">How it starts</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="step-number" style="font-size:1.25rem; margin-right: 1rem; color: var(--text-muted); font-family: var(--font-heading);">01</span>
+                            <div>
+                                <strong style="display: block; color: var(--text-main);">You reach out</strong>
+                                <p style="font-size: 0.95rem; margin-bottom: 0;">Fill in the form or send an email to start.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-number" style="font-size:1.25rem; margin-right: 1rem; color: var(--text-muted); font-family: var(--font-heading);">02</span>
+                            <div>
+                                <strong style="display: block; color: var(--text-main);">We have a conversation</strong>
+                                <p style="font-size: 0.95rem; margin-bottom: 0;">15 minutes to understand your situation.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-number" style="font-size:1.25rem; margin-right: 1rem; color: var(--text-muted); font-family: var(--font-heading);">03</span>
+                            <div>
+                                <strong style="display: block; color: var(--text-main);">You get clarity</strong>
+                                <p style="font-size: 0.95rem; margin-bottom: 0;">A clear recommendation on what to do next.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                        <p>Prefer email? Reach us directly at <br>
+                        <a href="mailto:dan@signalstreamsolutions.com" style="color: var(--accent-amber); font-weight: 600; text-decoration: none; font-size: 1.25rem;">dan@signalstreamsolutions.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Form -->
+                <div>
+                    <div class="card" style="background: var(--bg-surface); border: 1px solid rgba(232, 160, 56, 0.3);">
+                        <h2 style="font-size: 1.75rem; margin-bottom: 2rem;">Get in Touch</h2>
+                        
+                        <!-- Note: Using Formspree or simple action for static site -->
+                        <form action="mailto:dan@signalstreamsolutions.com" method="POST" enctype="text/plain">
+                            <div class="form-group">
+                                <label for="name">Name <span style="color: var(--accent-amber);">*</span></label>
+                                <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email <span style="color: var(--accent-amber);">*</span></label>
+                                <input type="email" id="email" name="email" class="form-control" required placeholder="john@company.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company / Business Name <span style="color: var(--accent-amber);">*</span></label>
+                                <input type="text" id="company" name="company" class="form-control" required placeholder="Acme Corp">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="business_type">What does your business do? <span style="color: var(--accent-amber);">*</span></label>
+                                <input type="text" id="business_type" name="business_type" class="form-control" required placeholder="e.g. B2B SaaS, Agency, Local Services">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bottleneck">What's your biggest operational bottleneck right now? <span style="color: var(--accent-amber);">*</span></label>
+                                <textarea id="bottleneck" name="bottleneck" class="form-control" required placeholder="We spend 15 hours a week manually entering data from PDFs into our CRM..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="hear_about">How did you hear about us? (optional)</label>
+                                <input type="text" id="hear_about" name="hear_about" class="form-control" placeholder="LinkedIn, Referral, etc.">
+                            </div>
+
+                            <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Send Message</button>
+                            <p style="font-size: 0.85rem; text-align: center; margin-top: 1.5rem; margin-bottom: 0;">We'll respond within 24 hours.</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Shared Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" style="color: var(--accent-amber);">Contact</a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.875rem;">&copy; 2026 Signal Stream Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
