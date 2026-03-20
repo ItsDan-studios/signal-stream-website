@@ -109,7 +109,10 @@
                     <div class="card" style="border: 1px solid var(--border-color);">
                         <h2 style="font-size: 1.75rem; margin-bottom: 2rem; color: var(--ocean-blue);">Get in Touch</h2>
                         
-                        <form action="mailto:dan@signalstreamsolutions.com" method="POST" enctype="text/plain">
+                        <!-- TODO: Dan — create a free Formspree account at https://formspree.io, create a form, and replace YOUR_FORM_ID below with your form ID -->
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                            <input type="text" name="_gotcha" style="display:none">
+                            <input type="hidden" name="_next" value="https://signalstreamsolutions.com/thank-you.html">
                             <div class="form-group">
                                 <label for="name">Name <span style="color: var(--ocean-blue);">*</span></label>
                                 <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
@@ -146,6 +149,24 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Cal.com Booking Section -->
+    <section class="section bg-grey">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 2rem;">
+                <h2>Or book a time directly</h2>
+                <p>Choose a 15-minute intro or a 30-minute deep dive — whatever fits your situation.</p>
+            </div>
+            <div class="cal-embed-wrapper">
+                <iframe
+                    src="https://cal.com/daniel-hernandez-fye2ha?embed=1&layout=month"
+                    style="border:none; width:100%; height:700px;"
+                    frameborder="0"
+                    loading="lazy"
+                ></iframe>
             </div>
         </div>
     </section>

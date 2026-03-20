@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're Booked | Signal Stream</title>
+    <meta name="description" content="Your discovery call is confirmed. Here's what to expect before we meet.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@300;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+    <!-- Shared Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Signal Stream" class="logo-img">
+                <span class="logo-text-wrapper">
+                    <span class="logo-title">SignalStream</span>
+                    <span class="logo-subtitle">Solutions</span>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="mobile-menu-btn">&#9776;</button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Get in Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Content -->
+    <section class="section" style="padding: 8rem 0;">
+        <div class="container" style="max-width: 700px;">
+            <h1 style="color: var(--ocean-blue); margin-bottom: 1rem;">You're Booked.</h1>
+            <p style="font-size: 1.25rem; margin-bottom: 3rem;">A calendar invite has been sent to your email. Here's what to expect:</p>
+
+            <ul class="feature-list" style="margin-bottom: 3rem;">
+                <li>
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <strong>We'll review your situation before the call so we come prepared.</strong>
+                </li>
+                <li>
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <strong>The call is focused entirely on your operations — not a sales pitch.</strong>
+                </li>
+                <li>
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <strong>You'll leave with a clear recommendation on what to do next.</strong>
+                </li>
+            </ul>
+
+            <p style="font-size: 1.1rem; font-weight: 500; color: var(--text-main); margin-bottom: 3rem;">No commitment until you decide to move forward.</p>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="index.html" class="btn">Back to Home</a>
+                <a href="services.html" class="btn btn-outline">Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shared Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.875rem;">&copy; 2026 Signal Stream Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
